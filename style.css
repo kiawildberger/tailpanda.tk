@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+2:wght@300&display=swap');
+
+body {
+    font-family: "M PLUS 2";
+    margin:0;
+    padding:0;
+}
+
+p { 
+    font-size:2em;
+    margin-top:8em;
+    cursor:default;
+    transition:margin-top 0.25s ease, opacity 0.2s ease;
+    height:2em;
+    width:fit-content;
+}
+
+p:hover {
+    /* margin-top:7.5em; */
+    opacity:0.2;
+}

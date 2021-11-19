@@ -13,6 +13,7 @@ p {
     transition:margin-top 0.25s ease, opacity 0.2s ease;
     height:2em;
     width:fit-content;
+    user-select:none;
 }
 
 p:hover {

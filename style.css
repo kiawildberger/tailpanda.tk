@@ -1,22 +1,91 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+2:wght@300&display=swap');
 
 body {
+    --bgcolor-scroll:350;
     font-family: "M PLUS 2";
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    background:rgb(51, 51, 51);
+}
+
+.background>img {
+    position:absolute;
+    z-index:-1;
+    --blur:5px;
+    filter:blur(var(--blur));
+    margin-top:calc(var(--blur) * -1.2);
+    margin-left:calc(var(--blur) * -1.2);
+    width:120%;
+    object-fit:cover;
+}
+.background>img:nth-of-type(2) {
+    top:calc(var(--blur) * -1);
+    clip-path:inset(0px 0px var(--blur) 0px);
+}
+
+.socials {
+    width:3em;
+    cursor:pointer;
+    float:right;
+    margin-bottom:16px;
+    -webkit-filter:invert(100%);
+    filter:invert(100%);
+    opacity:0.8;
+    transition:opacity 0.15s ease;
+    padding-right:10px;
+}
+.socials:hover {
+    opacity:1;
+}
+
+.footer {
+    width:100%;
+    height:5em;
+    margin:0;
+    padding:0;
+    font-size:0.5em;
+    background:rgb(51, 51, 51);
+    margin-top:3em;
+}
+
+.footer>p {
+    font-size:2em;
     margin:0;
     padding:0;
 }
 
-p { 
-    font-size:2em;
-    margin-top:8em;
-    cursor:default;
-    transition:margin-top 0.25s ease, opacity 0.2s ease;
-    height:2em;
-    width:fit-content;
-    user-select:none;
+.main {
+    background-image:url("./media/treesunset.jpg");
+    background-size: cover;
+    background-filter:blur(10px);
 }
 
-p:hover {
-    /* margin-top:7.5em; */
-    opacity:0.2;
+.panel {
+    /* background-color:rgba(255,255,255,0.2); */
+    /* i still need the acrylic texture from like unsplash or something */
+    /* background-image: url(media/acrylic-texture.jpg); */
+    /* filter:grayscale(100%); */
+    font-size:1em;
+    border-radius:2em;
+    padding:8px;
+    backdrop-filter:blur(15px) brightness(60%);
+    margin-top:3em;
+    width:50%;
+    height:fit-content;
 }
+.panel::before {
+    content:"";
+    background-image: url(media/acrylic-texture.jpg);
+    background-size:cover;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0.6;
+    filter:grayscale(100%);
+    border-radius:2em;
+}
+/* .panel:last-of-type {margin-bottom:3em;} */
+.panel > * {opacity:1;}

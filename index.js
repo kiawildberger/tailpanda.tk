@@ -1,0 +1,1 @@
+let id=e=>{return document.getElementById(e)}

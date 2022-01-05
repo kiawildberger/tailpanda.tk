@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+2:wght@300&display=swap');
 
+/* making a quick list here of the things im going to grab for style inspiration:
+the huge button on the bottom of https://www.suzunoya.com/kinu/ looks very nice and i like the hover effect
+https://kuon.space/ is crazy but i like the simplicity of the uhh i forgor what its called but it says Kuon Yagi and just goes home
+    - the buttons at https://mens-reile.com/ are all very nice, again i love the hover. the intro animation is beautiful and the scrolling stuff is very nice too
+    - i also like the underline animation on the top menu items
+what are these guys on https://www.crazy.co.jp/
+*/
+
 body {
     --bgcolor-scroll:350;
     font-family: "M PLUS 2";
     margin:0;
     padding:0;
     overflow-x:hidden;
-    background:rgb(51, 51, 51);
+    /* background:rgb(51, 51, 51); */
+    background:white;
 }
 
 p {
@@ -15,8 +24,38 @@ p {
     opacity:0.5;
     margin-top:20%;
     color:white;
-    cursor:default;
+    /* cursor:default; */
     user-select:none;
-    transition:opacity 0.2s ease;
+    /* transition:opacity 0.2s ease; */
 }
-p:hover { opacity:1; }
+/* p:hover { opacity:1; } */
+
+.woah {
+    font-size:16px;
+    border:1px solid rgb(51,51,51);
+    width:fit-content;
+    padding:0.5em 1em 0.5em 1em;
+    border-radius:4px;
+    cursor:pointer;
+    background:transparent;
+    color:black;
+    transition:color 0.35s ease, border-radius 0.35s ease, background 0.35s ease, border-color 0.6s ease, margin-top 0.3s ease;
+}
+
+.woah:hover {
+    color:white;
+    border-radius:2em;
+    border-color:#0087E7;
+    background:#0087E7;
+    margin-top:-0.2em;
+}
+/* .woah:hover:after {
+    content:;
+    position:relative;
+    left:0;
+    top:-25px;
+    border:1px solid green;
+    height: 50px;
+    width:2em;
+    box-sizing:border-box;
+} */

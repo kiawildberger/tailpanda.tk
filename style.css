@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+2:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300&display=swap');
+
 
 /* making a quick list here of the things im going to grab for style inspiration:
 the huge button on the bottom of https://www.suzunoya.com/kinu/ looks very nice and i like the hover effect
@@ -6,11 +9,42 @@ https://kuon.space/ is crazy but i like the simplicity of the uhh i forgor what 
     - the buttons at https://mens-reile.com/ are all very nice, again i love the hover. the intro animation is beautiful and the scrolling stuff is very nice too
     - i also like the underline animation on the top menu items
 what are these guys on https://www.crazy.co.jp/
+
+the huge button at the bottom of https://liginc.co.jp/
+https://www.s5-studios.com is very very cool
+the button borders at https://www.details.co.jp/
+https://alpharobe.com - people seem to like convex/concave when scrolling in japan
+https://www.sonicjam.co.jp/work/31732/ (same type button as suzunoya)
+underline swooshps at the bottom of https://www.buddiesapp.jp/ and also huge buttons in top right
+swooshps and half arrows at https://www.4digit.com/
+accelerator straw arrows at https://prty.jp/
+https://homunculus.jp/ bro...
+https://taotajima.jp/ is nuts (by homonculus) also the actual stuff is cool
+tiny little button transitions at https://www.epoch-inc.jp/
+https://noraisinsandwich.com/ is adorable
+https://www.mitsubishi-motors.co.jp/special/weekend-explorer/koten/ - the frames at the bottom + slider buttons
+beautiful large button at the bottom of http://www.don-guri.com/
+https://www.akqa.com/work/discord/imagine-a-place/ i like the circle to square share button
+https://bring.org/ popout button!!
+best buttons https://nukmel.com/ beautiful text input too
+the tilt movement in https://identity.city/about/
+dreampunk website https://ultrasupernew.com/
+the power of these grey buttons after all the insanity https://www.ficc.jp/
+sexy button again https://www.pics.tokyo/works/
+the rainbow overlays + email contact form *chefs kiss* https://whatever.co/ja/
+this is cute https://dotby.jp/
+https://wearyouare.jp/ nice button icons
+
+(these are from https://www.awwwards.com/digital-agencies-in-tokyo-a-look-at-japanese-web-design.html)
+
+i am going to put some colors here that i like
+"black": #282018
 */
+
+
 
 body {
     --bgcolor-scroll:350;
-    font-family: "M PLUS 2";
     margin:0;
     padding:0;
     overflow-x:hidden;
@@ -30,52 +64,83 @@ body {
 }
 p:hover { opacity:1; } */
 
-.woah {
+.main {
+    margin:5rem;
+}
+.main > div {
+    width:30%;
+}
 
-    margin:30% 0 0 50%;
+/*
+    straight up ripoff of mens-reile.com
+    i stole the colors
+    i stole the font
+    i stole everything about the button except the transition timing
 
-    font-size:16px;
+*/
+.reile {
+    font-family:"Open Sans";
+}
+.reile > .button {
+    font-size:20px;
     height:100%;
     max-height:2.5em;
     border:1px solid rgb(51,51,51);
     width:fit-content;
-    padding:0.5em 1em 0.5em 1em;
+    padding:0.5em 4em 0.5em 4em;
     border-radius:4px;
     cursor:pointer;
     background:transparent;
     color:black;
     transition:color 0.35s ease, border-radius 0.35s ease, 
         background 0.35s ease, border-color 0.6s ease, 
-        margin-top 0.3s ease, box-shadow 0.3s ease,
-        max-height 0.35s ease;
+        box-shadow 0.3s ease, max-height 0.35s ease, transform 0.2s ease;
 }
-
-.woah-content {
-    width:fit-content;
-    color:black;
-    font-size:16px;
+.reile > .round-button {
+    font-size:20px;
     height:100%;
-    padding:0;
-    margin:0;
+    max-height:2.5em;
+    border:1px solid rgb(51,51,51);
+    width:fit-content;
+    padding:0.5em 4em 0.5em 4em;
+    border-radius:4px;
+    cursor:pointer;
+    background: #282828;
+    color:white;
+    transition:color 0.35s ease, border-radius 0.35s ease, 
+        background 0.35s ease, border-color 0.6s ease, 
+        box-shadow 0.3s ease, max-height 0.35s ease, transform 0.2s ease;
+}
+.reile > .round-button:hover {
+    color:black;
+    background:transparent;
+    border-radius:2rem;
+    box-shadow:0 20px 40px -14px rgba(0,0,0,0.25);
+    transform:translate(0,-2px);
+}
+.reile > .button:hover {
+    background:#282018;
+    color:white;
+    border-radius:2rem;
+    box-shadow:0 20px 40px -14px rgba(0,0,0,0.25);
+    transform:translate(0,-2px);
+}
+.reile > input[type="text"] {
+    font-size:20px;
+    max-height:2.5em;
+    height:100%;
+    border:1px solid black;
+    outline:none;
+    padding:0.5em 0.8em 0.5em 0.8em;
+    border-radius:4px;
+    width:15em;
 }
 
-/* .woah ~ .woah-content:hover {
-    color:white;
-    border-radius:2em;
-    border-color:#0087E7;
-    background:#0087E7;
-    margin-top:-0.2em;
-    box-shadow:2px 2px 8px grey;
-    max-height:2.7em;
-} */
-
-/* .woah:hover:after {
-    content:;
-    position:relative;
-    left:0;
-    top:-25px;
-    border:1px solid green;
-    height: 50px;
-    width:2em;
-    box-sizing:border-box;
-} */
+.reile > a {
+    color:#0087E7;
+    text-decoration: none;
+    border-bottom:1px solid #0087E7;
+    padding-bottom:1px;
+    transition:all 0.3s linear;
+}
+.reile > a:hover { border-color:#005E9E; color:#005E9E; }

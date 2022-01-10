@@ -18,20 +18,25 @@ body {
     background:white;
 }
 
-p {
+/* p {
     font-size:2em;
     margin-left:40%;
     opacity:0.5;
     margin-top:20%;
     color:white;
-    /* cursor:default; */
+    cursor:default;
     user-select:none;
-    /* transition:opacity 0.2s ease; */
+    transition:opacity 0.2s ease;
 }
-/* p:hover { opacity:1; } */
+p:hover { opacity:1; } */
 
 .woah {
+
+    margin:30% 0 0 50%;
+
     font-size:16px;
+    height:100%;
+    max-height:2.5em;
     border:1px solid rgb(51,51,51);
     width:fit-content;
     padding:0.5em 1em 0.5em 1em;
@@ -39,16 +44,31 @@ p {
     cursor:pointer;
     background:transparent;
     color:black;
-    transition:color 0.35s ease, border-radius 0.35s ease, background 0.35s ease, border-color 0.6s ease, margin-top 0.3s ease;
+    transition:color 0.35s ease, border-radius 0.35s ease, 
+        background 0.35s ease, border-color 0.6s ease, 
+        margin-top 0.3s ease, box-shadow 0.3s ease,
+        max-height 0.35s ease;
 }
 
-.woah:hover {
+.woah-content {
+    width:fit-content;
+    color:black;
+    font-size:16px;
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
+/* .woah ~ .woah-content:hover {
     color:white;
     border-radius:2em;
     border-color:#0087E7;
     background:#0087E7;
     margin-top:-0.2em;
-}
+    box-shadow:2px 2px 8px grey;
+    max-height:2.7em;
+} */
+
 /* .woah:hover:after {
     content:;
     position:relative;

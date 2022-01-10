@@ -34,6 +34,7 @@ sexy button again https://www.pics.tokyo/works/
 the rainbow overlays + email contact form *chefs kiss* https://whatever.co/ja/
 this is cute https://dotby.jp/
 https://wearyouare.jp/ nice button icons
+https://toio.io this is the second style i think - simple pastel type buttons + rotated squares
 
 (these are from https://www.awwwards.com/digital-agencies-in-tokyo-a-look-at-japanese-web-design.html)
 
@@ -70,6 +71,8 @@ p:hover { opacity:1; } */
 .main > div {
     width:30%;
 }
+
+td { height:fit-content; }
 
 /*
     straight up ripoff of mens-reile.com
@@ -144,3 +147,95 @@ p:hover { opacity:1; } */
     transition:all 0.3s linear;
 }
 .reile > a:hover { border-color:#005E9E; color:#005E9E; }
+
+/*
+this one is all from toio obv
+*/
+
+.toio {
+    font-family:"M PLUS 2";
+}
+.toio > a {
+    color:#282018;
+    text-decoration:none;
+    border-bottom:1px solid #005E9E;
+    padding-bottom:2px;
+    transition:all 0.2s ease;
+}
+.toio > a:hover { border-width:4px; }
+.toio > .button {
+    font-size:20px;
+    background:transparent;
+    border:3px solid black;
+    padding:0.5em 6em;
+    border-radius:4rem;
+    cursor:pointer;
+    transition:all 0.2s ease;
+}
+.toio > .button::after {
+    content:'';
+    position:absolute;
+    margin-left:3.5em;
+    margin-top:6px;
+    width:12px;
+    height:12px;
+    transition:all 0.2s ease;
+    transform:rotate(45deg);
+    border-right:1px solid black;
+    border-top:1px solid black;
+}
+.toio > .button:hover { background-color:rgba(0,0,0,0.5); }
+.toio > .button:hover::after { margin-left:4em; }
+.toio > .button-red:hover::after { margin-left:4em; transform:scale(1.2); }
+.toio > .button-red { border-color:rgba(229,56,23, 0.5); }
+.toio > .button-red:hover { background:rgba(229,56,23, 0.5); }
+.toio > .button-blue { border-color:rgba(0,130,153,0.5); }
+.toio > .button-blue:hover { background:rgba(0,130,153,0.5); }
+.toio > .button-blue:hover::after { transform:rotate(45deg) scale(1.1); }
+.toio > input[type="text"] {
+    font-size:20px;
+    border:2px solid rgb(121, 121, 121);
+    outline:none;
+    padding:0.5em 0.8em;
+    border-radius:2px;
+    transition:all 0.2s ease;
+}
+.toio > input[type="text"]:focus {
+    border-bottom:2px solid black;
+}
+
+/* 
+fun with nukmel
+- are there multiple button styles in nukmel?
+*/
+.nukmel {
+    font-family:"Poppins";
+}
+.nukmel > .button {
+    font-size:20px;
+    border:none;
+    background:rgb(196, 196, 196);
+    padding:0.5em 1.6em;
+    cursor:pointer;
+    border-radius:3em;
+}
+.nukmel > .menuitem {
+    color:#252525;
+    cursor:pointer;
+    border:none;
+    transition:all 0.3s ease;
+    letter-spacing:normal;
+}
+.nukmel > .menuitem:hover { letter-spacing:2px; }
+.nukmel > .menuitem::before {
+    content:'';
+    width:1em;
+    height:3px;
+    opacity:0;
+    transition:all 0.3s ease;
+    position:absolute;
+    background:#252525;
+}
+.nukmel > .menuitem:hover::before {
+    opacity:1;
+}

@@ -8,6 +8,7 @@ body {
     font-size:16px;
     font-family:"Open Sans";
     --navbar-spacing:8rem;
+    overflow-x:hidden;
 }
 
 /*
@@ -21,19 +22,49 @@ blacks:
     /* not sure if i want this position:sticky, ill add some shit and see how it works */
     width:100%;
     height:4em;
-    border:1px solid black;
+    border-bottom:1px solid black;
     padding:auto;
     font-family:"Overlock SC";
     user-select: none;
 }
 .navbar > * { display:inline-block; }
-.navbar > .header { /* want to do something cool on hover but idk what */
+.navbar > .header { /* on hover there will be a short and fat T that comes out underneath */
     margin:1rem 0 0 var(--navbar-spacing);
     cursor:default;
     font-size:20px;
     letter-spacing: 2px;
+    border:none;
+    transition:all 0.2s ease;
+}
+.navbar > .header::after {
+    position:absolute;
+    content:'';
+    width:6rem;
+    height:0.5rem;
+    transition:all 0.2s ease;
+    transform:translate(-3.25rem, 1.5rem);
+    border-left:2px solid #282018;
+    opacity:0;
+}
+.navbar > .header::before { 
+    position:absolute;
+    content:'';
+    transition:all 0.2s ease;
+    width:6.5rem;
+    height:1.5rem;
+    opacity:0;
+    border-bottom:2px solid #282018;
+    /* border-top:2px solid #282018; */
+}
+.navbar > .header:hover::after {
+    opacity:1;
+}
+.navbar > .header:hover::before {
+    opacity:1;
 }
 .navbar > .item {
+    color:black;
+    text-decoration:none;
     margin-left:var(--navbar-spacing); /* this is kinda shitty but i think itll work we'll see */
     padding:1rem 3rem;
     cursor:pointer;
@@ -42,3 +73,20 @@ blacks:
 }
 .navbar > .item:first-of-type { margin-left:0; }
 .navbar > .item:hover { background:#282018; color:white; }
+
+.hugetitle {
+    margin-left:25%;
+    margin-top:10rem;
+    /* font-family:"Overlock SC"; */
+}
+.hugetitle > .title { font-size:36px; }
+.hugetitle > .description { width:25em; }
+
+.rightblack {
+    width:60%;
+    height:40rem;
+    position:absolute;
+    background:#282018;
+    right:5rem;
+    top:45rem;
+}

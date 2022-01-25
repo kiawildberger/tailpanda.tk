@@ -3,13 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Overlock+SC:wght@300&display=swap');
 
 body {
+    --navbar-spacing:8rem;
+    --navbar-foreground:#fff;
+    --navbar-background:#161616;
+
     padding:0;
     margin:0;
     font-size:16px;
     font-family:"Open Sans";
-    --navbar-spacing:8rem;
     overflow-x:hidden;
-    overflow-y:scroll;
+    /* overflow-y:scroll; */
     /* perspective:100px;
     perspective-origin:0 0;
     transform-style:preserve-3d; */
@@ -45,16 +48,29 @@ blacks:
     /* not sure if i want this position:sticky, ill add some shit and see how it works */
     width:100%;
     height:4em;
-    border-bottom:1px solid black;
+    background-color:var(--navbar-background);
+    border-bottom:1px solid var(--navbar-background);
     padding:auto;
     font-family:"Overlock SC";
     user-select: none;
+}
+.navbar::after {
+    content:'';
+    position:absolute;
+    left:-10%;
+    top:-3em;
+    width:120%;
+    height:10em;
+    background:var(--navbar-background);
+    z-index:-1;
+    filter:blur(1.2em);
 }
 .navbar > * { display:inline-block; }
 .navbar > .header { /* on hover there will be a short and fat T that comes out underneath */
     margin:1rem 0 0 var(--navbar-spacing);
     cursor:default;
     font-size:20px;
+    color:var(--navbar-foreground);
     letter-spacing: 2px;
     border:none;
     transition:all 0.2s ease;
@@ -66,7 +82,7 @@ blacks:
     height:0.5rem;
     transition:all 0.2s ease;
     transform:translate(-3.25rem, 1.5rem);
-    border-left:2px solid #282018;
+    border-left:2px solid var(--navbar-foreground);
     opacity:0;
 }
 .navbar > .header::before { 
@@ -76,7 +92,7 @@ blacks:
     width:6.5rem;
     height:1.5rem;
     opacity:0;
-    border-bottom:2px solid #282018;
+    border-bottom:2px solid var(--navbar-foreground);
     /* border-top:2px solid #282018; */
 }
 .navbar > .header:hover::after {
@@ -86,7 +102,7 @@ blacks:
     opacity:1;
 }
 .navbar > .item {
-    color:black;
+    color:var(--navbar-foreground);
     text-decoration:none;
     margin-left:var(--navbar-spacing); /* this is kinda shitty but i think itll work we'll see */
     padding:1rem 3rem;
@@ -95,16 +111,17 @@ blacks:
     /* border:1px solid red; */
 }
 .navbar > .item:first-of-type { margin-left:0; }
-.navbar > .item:hover { background:#282018; color:white; }
+.navbar > .item:hover { background:var(--navbar-foreground); color:var(--navbar-background); }
 
 .main {
     height:100%;
     width:100%;
+    /* background:linear-gradient(var(--navbar-background) 5%, #fff 100%); */
+    padding-left:25%;
+    padding-top:10rem;
 }
 
 .hugetitle {
-    margin-left:25%;
-    margin-top:10rem;
     /* font-family:"Overlock SC"; */
 }
 .hugetitle > .title { font-size:36px; margin:0;  }

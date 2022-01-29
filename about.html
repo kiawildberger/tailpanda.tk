@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <title>home | panda</title>
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./about.css">
+</head>
+<body>
+    <div class="navbar" align="center">
+        <!-- <a class="item" href="/">home</a> -->
+        <a class="item" href="/projects.html">projects</a>
+        <a class="header" href="/">tail panda</a>
+        <a class="item" href="/about.html">about</a>
+        <!-- <a class="item" href="/contact">contact</a> -->
+    </div>
+    <div class="main">
+        <div class="background"></div>
+        <div class="profile">
+            <div id="pfps">
+                <img src="media/pfps/1.png" title="squirrel drawing from somewhere">
+                <img src="media/pfps/2.png" title="moki from ori and the will of the wisps">
+                <img src="media/pfps/3.png" title="tk from angelbeats">
+                <img src="media/pfps/4.png" title="rex lapis by @clairemxj on ig">
+            </div>
+            <div align="center">
+                <div class="uname">tail panda</div>
+                <div class="aboutme">
+                    Hey! I'm tail panda, also sometimes referred to as kia. I live in California, US, and I love talking about music and food, and of course listening and eating as well!
+                    Typically you'll find me listening to City Girl, death's dynamic shroud, Kenichiro Nishihara, or Discoholic, to name just a few.
+                    I also try to read, paint miniatures, and play video games, though a healthy balance is hard to achieve! My two favorite books are <i>Sourdough</i> by Robin Sloan, and <i>A Tale for the Time Being</i> by Ruth Ozeki.
+                    I hope to be able to write about books, music and food in a way that brings them together as a single experience.<br>
+                    man i hate writing this type of thing i sound so snobby and disconnected please judge me by my cute hobbies like eating and reading instead of this weird bs
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('a[href="/about.html"]').classList.add("active")
+        let id=e=>{return document.getElementById(e)}
+        let pfpwidth = 150, offset = 240;
+        let pfps = Array.from(document.querySelectorAll("#pfps > img"))
+        pfps.forEach(e => {
+            let index = pfps.indexOf(e)
+            e.style.left = ((window.innerWidth/2+offset/2) - (pfpwidth/2)) - (index*offset) + "px"
+        })
+    </script>
+</body>

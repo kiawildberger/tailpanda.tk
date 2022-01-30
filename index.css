@@ -32,6 +32,22 @@ body {
 .playlist > .description {
 
 }
+#dive-listen::after {
+    content:'';
+    position:absolute;
+    margin-left:1em;
+    margin-top:6px;
+    width:12px;
+    height:12px;
+    transition:all 0.2s ease;
+    transform:rotate(45deg);
+    border-right:2px solid black;
+    border-top:2px solid black;
+}
+#dive-listen:hover::after {
+    margin-left:2em;
+    /* border-color:white; */
+}
 
 .button {
     font-size:20px;
